@@ -5,8 +5,8 @@
     <classes>
       <class name="com.ProjectSpecificLibrary.LoginTest">
         <methods>
+          <include name="addToCart"/>
           <include name="openBrowser"/>
-          <include name="search"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.ProjectSpecificLibrary.LoginTest -->
