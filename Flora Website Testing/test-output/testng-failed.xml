@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="Test(failed)">
+  <parameter name="browser" value="Chrome"/>
+  <test name="Safaribroswer(failed)">
+    <parameter name="browser" value="Safari"/>
     <classes>
-      <class name="com.ProjectSpecificLibrary.LoginTest">
+      <class name="com.ProjectSpecificLibrary.MultiBrowser">
         <methods>
-          <include name="addToCart"/>
-          <include name="openBrowser"/>
           <include name="closeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="addToCart"/>
         </methods>
-      </class> <!-- com.ProjectSpecificLibrary.LoginTest -->
+      </class> <!-- com.ProjectSpecificLibrary.MultiBrowser -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Safaribroswer(failed) -->
+  <test name="Chromebroswer(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.ProjectSpecificLibrary.MultiBrowser">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="addToCart"/>
+        </methods>
+      </class> <!-- com.ProjectSpecificLibrary.MultiBrowser -->
+    </classes>
+  </test> <!-- Chromebroswer(failed) -->
 </suite> <!-- Failed suite [Suite] -->
