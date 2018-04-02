@@ -32,6 +32,6 @@ multiBrowser.java-
 Automated Testcases:
 1) Testcase to validate search functionality with valid input
 2) Testcase to validate select an item,delivery date,delivery address and adding to cart
-3) Testcase to select a submenu item and print title of webpage opened.
+3) Testcase to select a submenu item and print title of webpage opened
 
     
