@@ -6,6 +6,7 @@
       <class name="com.ProjectSpecificLibrary.MultiBrowser">
         <methods>
           <include name="search"/>
+          <include name="submenuCake"/>
           <include name="addToCart"/>
         </methods>
       </class> <!-- com.ProjectSpecificLibrary.MultiBrowser -->

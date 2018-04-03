@@ -7,10 +7,11 @@
     <classes>
       <class name="com.ProjectSpecificLibrary.MultiBrowser">
         <methods>
+          <include name="search"/>
           <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
+          <include name="submenuCake"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
           <include name="addToCart"/>
         </methods>
       </class> <!-- com.ProjectSpecificLibrary.MultiBrowser -->
@@ -22,9 +23,8 @@
       <class name="com.ProjectSpecificLibrary.MultiBrowser">
         <methods>
           <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
           <include name="addToCart"/>
         </methods>
       </class> <!-- com.ProjectSpecificLibrary.MultiBrowser -->

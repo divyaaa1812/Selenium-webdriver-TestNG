@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  3 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="addToCart">addToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="addToCart">addToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="search">search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="submenuCake">submenuCake</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,22 +139,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="mouseOver">mouseOver</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="mouseOver">mouseOver</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="search">search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="search">search</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.ProjectSpecificLibrary.MultiBrowser" class="method navigator-link" hash-for-method="submenuCake">submenuCake</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -131,6 +159,71 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.ProjectSpecificLibrary.MultiBrowser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToCart">
+                  </a> <!-- addToCart -->
+                  <span class="method-name">addToCart</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;top&quot;]/body/div[6]/div[1]/table/tbody/tr[2]/td[2]&quot;}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef),platform=Mac OS X 10.10.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
+System info: host: &apos;Nikhileshs-MacBook.local&apos;, ip: &apos;10.1.10.161&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;9.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef), userDataDir=/var/folders/0r/725ws35n1fdbkf4365ty5gfw0000gn/T/.org.chromium.Chromium.s6sWuj}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5dd4609bef7657f216cb8424eb26b4c0
+*** Element info: {Using=xpath, value=//*[@id=&quot;top&quot;]/body/div[6]/div[1]/table/tbody/tr[2]/td[2]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at com.ProjectSpecificLibrary.MultiBrowser.addToCart(MultiBrowser.java:93)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.ProjectSpecificLibrary.MultiBrowser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToCart">
+                  </a> <!-- addToCart -->
+                  <span class="method-name">addToCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="search">
+                  </a> <!-- search -->
+                  <span class="method-name">search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="submenuCake">
+                  </a> <!-- submenuCake -->
+                  <span class="method-name">submenuCake</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -139,20 +232,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mouseOver">
-                  </a> <!-- mouseOver -->
-                  <span class="method-name">mouseOver</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="mouseOver">
-                  </a> <!-- mouseOver -->
-                  <span class="method-name">mouseOver</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="search">
                   </a> <!-- search -->
                   <span class="method-name">search</span>
@@ -160,9 +239,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="search">
-                  </a> <!-- search -->
-                  <span class="method-name">search</span>
+                  <a name="submenuCake">
+                  </a> <!-- submenuCake -->
+                  <span class="method-name">submenuCake</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,28 +308,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mouseOver')
+data.setCell(0, 1, 'addToCart')
 data.setCell(0, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
-data.setCell(0, 3, 7555);
+data.setCell(0, 3, 37524);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'search')
 data.setCell(1, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
-data.setCell(1, 3, 6306);
+data.setCell(1, 3, 9060);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'search')
+data.setCell(2, 1, 'submenuCake')
 data.setCell(2, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
-data.setCell(2, 3, 5931);
+data.setCell(2, 3, 7935);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'mouseOver')
+data.setCell(3, 1, 'submenuCake')
 data.setCell(3, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
-data.setCell(3, 3, 376);
+data.setCell(3, 3, 12);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'search')
+data.setCell(4, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
+data.setCell(4, 3, 6);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'addToCart')
+data.setCell(5, 2, 'com.ProjectSpecificLibrary.MultiBrowser')
+data.setCell(5, 3, 3);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -265,18 +352,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ProjectSpecificLibrary.MultiBrowser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">addToCart</span>
-                <br/>
-                <span class="ignored-method-name">addToCart</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -287,36 +365,44 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.ProjectSpecificLibrary.MultiBrowser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeTest(Safari)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass(Safari)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">search</span>
-                <span class="method-start">15971 ms</span>
+                <span class="method-start">11690 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">mouseOver</span>
-                <span class="method-start">21907 ms</span>
+                <span class="method-name">addToCart</span>
+                <span class="method-start">11706 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">22290 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">submenuCake</span>
+                <span class="method-start">11723 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-class before">
-                <span class="method-name">beforeTest(Chrome)</span>
-                <span class="method-start">22654 ms</span>
+                <span class="method-name">beforeClass(Chrome)</span>
+                <span class="method-start">11965 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">search</span>
-                <span class="method-start">38463 ms</span>
+                <span class="method-start">33658 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">mouseOver</span>
-                <span class="method-start">44773 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addToCart</span>
+                <span class="method-start">42721 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">submenuCake</span>
+                <span class="method-start">80253 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">52333 ms</span>
+                <span class="method-start">88195 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

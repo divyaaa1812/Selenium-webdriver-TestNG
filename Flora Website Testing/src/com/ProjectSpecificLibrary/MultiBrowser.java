@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +23,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class MultiBrowser {
+import com.generallibrary.Screenshots;
+
+public class MultiBrowser extends Screenshots {
 	WebDriver driver;
 	Properties pro = new Properties();
 	@Parameters("browser")
 	@BeforeClass
-	public void beforeTest(String browser) {
+	public void beforeClass(String browser) {
 		if(browser.equalsIgnoreCase("Safari")) {
 			driver = new SafariDriver();
 		} else if (browser.equalsIgnoreCase("Chrome")) {
@@ -39,11 +42,12 @@ public class MultiBrowser {
 		  driver.manage().window().maximize();
 	}	
 /*Testcase for search functionality on webpage*/
+
 	 @Test(priority=1)
-  		public void search() {
+  		public void search() throws Exception {
 		 String Title1=driver.getTitle();
 		 System.out.println("page opened is :" +Title1);
-//load properties file
+		 //load properties file
 	  try
 	  {
 	  File fs = new File("application.properties");
@@ -51,6 +55,7 @@ public class MultiBrowser {
 	  pro.load(f);
 	  //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.findElement(By.id(pro.getProperty("search_button_id"))).sendKeys("yellow");
+	  this.takeSnapShot(driver);
 	  driver.findElement(By.className(pro.getProperty("search_Icon_class"))).click();  
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  List<WebElement> total= driver.findElements(By.cssSelector(pro.getProperty("Total_Items_page_cssselector"))); 
@@ -63,12 +68,15 @@ public class MultiBrowser {
 		  e.printStackTrace();
 	  }
 	  }
+	 	 
 /*Testcase to validate items adding to cart*/
 	 @Test(priority=2)
-	 public void addToCart() {
+	 public void addToCart() throws Exception  {
 		 driver.findElement(By.cssSelector(pro.getProperty("First_element_list_cssSelector"))).click();
 		WebElement availabilitytextbox= driver.findElement(By.id(pro.getProperty("check_availability_id")));
 		availabilitytextbox.sendKeys("banglore");
+//take screenshot
+		  this.takeSnapShot(driver);
 /*  cursor to focus on text box clicking on it before performing keyboard operations*/
 		availabilitytextbox.click();
 /*Using Keyboard operations to select from dynamic search list */
@@ -94,7 +102,9 @@ public class MultiBrowser {
 			 //Performing mouse action i.e mousehover to menu items and selecting submenu link using linkText()
 		 Actions a = new Actions(driver);
 		 a.moveToElement(driver.findElement(By.xpath(pro.getProperty("Primary_nav_birthday_xpath")))).build().perform();
+		  this.takeSnapShot(driver);
 		 driver.findElement(By.linkText("Regular Cakes")).click();
+		  this.takeSnapShot(driver);
 		 	//Get Title of webpage opened and display on console
 		 String Title3 = driver.getTitle();
 		 System.out.println("Page opened is :" +Title3);
