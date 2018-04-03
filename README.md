@@ -34,4 +34,16 @@ Automated Testcases:
 2) Testcase to validate select an item,delivery date,delivery address and adding to cart
 3) Testcase to select a submenu item and print title of webpage opened
 
+Creating class with method to capture screenshots where ever necessary:
+1) use TakeScreenshot Interface and getScreenshotAs() method.
+        //Convert web driver object to TakeScreenshot
+    //Call getScreenshotAs method to create image file
+ File src = ((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
+            //Move image file to new destination with file name "systemcurrenttime".jpg
+File DestFile=new File("/Users/nikhilesh/eclipse/Flora Website Testing/Screenshots"+System.currentTimeMillis()+".jpg");
+                //Copy file at destination
+FileUtils.copyFile(src, DestFile);
+2) now extend this class in current program and call the method wherever I need to take screenshot by passing driver object as argument.
+
+
     
