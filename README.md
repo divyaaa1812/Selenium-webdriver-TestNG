@@ -34,7 +34,7 @@ Automated Testcases:
 2) Testcase to validate select an item,delivery date,delivery address and adding to cart
 3) Testcase to select a submenu item and print title of webpage opened
 
-Creating class with method to capture screenshots where ever necessary:
+creating java class to capture screenshots where ever necessary in our testcases:
 1) use TakeScreenshot Interface and getScreenshotAs() method.
         //Convert web driver object to TakeScreenshot
     //Call getScreenshotAs method to create image file
