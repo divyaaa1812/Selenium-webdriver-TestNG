@@ -26,7 +26,7 @@ multiBrowser.java-
 			  System.setProperty("webdriver.chrome.driver", "/Users/nikhilesh/Desktop/chromedriver");
 			driver=new ChromeDriver();
 		}
- Testng.xml -
+ Testng.xml - 
   <parameter name="browser" value = "Safari" />
   
 Automated Testcases:
